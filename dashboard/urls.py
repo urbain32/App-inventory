@@ -6,5 +6,6 @@ from . import views
 # path(giving url path name,name of the function in views,name we want to give our function)
 urlpatterns=[
     path('',views.index,name='dashboard-index'),
-    path('product/',views.index,name='dashboard-product'),
+    path('staff/',views.staff,name='dashboard-staff'),
+    path('product/',views.product,name='dashboard-product'),
 ]
