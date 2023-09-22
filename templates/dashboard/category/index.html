@@ -53,13 +53,17 @@
                   <a
                     class="btn btn-outline-info btn-sm"
                     title="Edit"
-                    data-toggle="tooltip"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editCategoryModal"
                     ><i class="mdi mdi-circle-edit-outline mdi-18px"></i
                   ></a>
                   <a
                     class="btn btn-outline-danger btn-sm"
                     title="Delete"
-                    data-toggle="tooltip"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteCategoryModal"
                     ><i class="mdi mdi-delete mdi-18px"></i
                   ></a>
                 </td>
@@ -72,13 +76,17 @@
                     <a
                       class="btn btn-outline-info btn-sm"
                       title="Edit"
-                      data-toggle="tooltip"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#editCategoryModal"
                       ><i class="mdi mdi-circle-edit-outline mdi-18px"></i
                     ></a>
                     <a
                       class="btn btn-outline-danger btn-sm"
                       title="Delete"
-                      data-toggle="tooltip"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#deleteCategoryModal"
                       ><i class="mdi mdi-delete mdi-18px"></i
                     ></a>
                   </div>
@@ -94,6 +102,9 @@
 </div>
 <!-- add Modal HTML -->
 {% include "dashboard/category/add.html" %}
-<!-- Edit Modal HTML -->
-
+<!-- delete Modal HTML -->
+{% include "dashboard/category/delete.html"%}
+<!-- edit Modal HTML -->
+{% include "dashboard/category/edit.html"%}
+<!-- end block -->
 {%endblock %}
