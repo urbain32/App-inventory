@@ -9,6 +9,6 @@ def staff(request):
 def product(request):
     return render(request,'dashboard/product/index.html')
 def category(request):
-    return render(request,'dashboard/category/category.html')
+    return render(request,'dashboard/category/index.html')
 def order(request):
     return render(request,'dashboard/order.html')
