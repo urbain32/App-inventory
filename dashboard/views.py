@@ -7,7 +7,7 @@ def index(request):
 def staff(request):
     return render(request,'dashboard/staff.html')
 def product(request):
-    return render(request,'dashboard/product.html')
+    return render(request,'dashboard/product/index.html')
 def category(request):
     return render(request,'dashboard/category/category.html')
 def order(request):
