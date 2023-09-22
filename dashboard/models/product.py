@@ -6,4 +6,4 @@ class Product(models.Model):
     category = models.ForeignKey(Category,on_delete=models.PROTECT) 
     quantity = models.PositiveIntegerField(null=True)
     def __str__(self):
-        return self.name
+        return f'{self.name}-{self.quantity}'
