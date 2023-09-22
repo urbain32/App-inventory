@@ -1,0 +1,44 @@
+{% block content %}
+<!-- Modal -->
+<form action="">
+  <div
+    id="deleteProductModal"
+    class="modal fade"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    role="dialog"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Delete Product</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure to delete ?</p>
+          <p class="text-danger">
+            <small>!!! this action is irreversible.</small>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="submit"
+            class="btn btn-danger"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            cancel
+          </button>
+          <button class="btn btn-success" type="submit">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}
