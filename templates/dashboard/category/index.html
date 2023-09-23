@@ -42,13 +42,14 @@
               <tr>
                 <th>#</th>
                 <th>Category name</th>
-                <th c>Action</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
+              {% for category in categories %}
               <tr>
-                <td>1</td>
-                <td>Food</td>
+                <td>{{category.id}}</td>
+                <td>{{category.name}}</td>
                 <td class="d-flex align-items-center gap-2">
                   <a
                     class="btn btn-outline-info btn-sm"
@@ -68,30 +69,7 @@
                   ></a>
                 </td>
               </tr>
-              <tr>
-                <td>2</td>
-                <td>Fruit</td>
-                <td>
-                  <div class="d-flex align-items-center gap-2">
-                    <a
-                      class="btn btn-outline-info btn-sm"
-                      title="Edit"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#editCategoryModal"
-                      ><i class="mdi mdi-circle-edit-outline mdi-18px"></i
-                    ></a>
-                    <a
-                      class="btn btn-outline-danger btn-sm"
-                      title="Delete"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#deleteCategoryModal"
-                      ><i class="mdi mdi-delete mdi-18px"></i
-                    ></a>
-                  </div>
-                </td>
-              </tr>
+              {% endfor %}
             </tbody>
           </table>
         </div>

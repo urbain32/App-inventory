@@ -1,6 +1,7 @@
 {% block content %}
 <!-- Modal -->
-<form class="forms-sample">
+<form class="forms-sample" method="post" action="{% url 'create_Category' %}">
+  {% csrf_token %}
   <div
     class="modal fade"
     id="exampleModal"
@@ -24,23 +25,18 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <label for="exampleInputUsername1">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="exampleInputName1"
-              placeholder="Name"
-            />
+            <label for="{{ form.name.id_for_label }}">Name</label>
+            {{ form.name }}
           </div>
         </div>
         <div class="modal-footer">
           <button
-            type="submit"
+            type="button"
             class="btn btn-danger"
             data-bs-dismiss="modal"
             aria-label="Close"
           >
-            cancel
+            Cancel
           </button>
           <button type="submit" class="btn btn-success">Save</button>
         </div>
@@ -48,5 +44,4 @@
     </div>
   </div>
 </form>
-
 {% endblock %}
