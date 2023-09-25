@@ -9,7 +9,10 @@ urlpatterns=[
     path('staff/',staff.staff,name='dashboard-staff'),
     path('product/',product.product,name='dashboard-product'),
     path('order/',order.order,name='dashboard-order'),
+    # category
     path('category/',category.categoryView,name='dashboard-category'),
-    path('categoryAdd/',category.categoryAddView,name='create_category'),
+    path('category/add',category.categoryAddView,name='create_category'),
+    path('category/update/<int:id>',category.update,name="category_update"),
+
 
 ]
