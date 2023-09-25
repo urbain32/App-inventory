@@ -13,6 +13,7 @@ urlpatterns=[
     path('category/',category.categoryView,name='dashboard-category'),
     path('category/add',category.categoryAddView,name='create_category'),
     path('category/update/<int:id>',category.update,name="category_update"),
+    path('category/delete/<int:id>',category.delete,name="category_delete"),
 
 
 ]
