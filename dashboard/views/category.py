@@ -2,21 +2,21 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from ..forms import CategoryForm
 from ..models import Category
+from django.views import generic
+
 # Create your views here.
 
 # Category
 def categoryView(request):
-    categories = Category.objects.all()  # Fetch categories from the database
-    print("hhhhhhhhhhhhhhhhhhhhh",categories)
+    categories = Category.objects.all() 
     return render(request, 'dashboard/category/index.html', {'categories': categories})
 def categoryAddView(request):
-    if request.method == 'POST':
-        form = CategoryForm(request.POST)
-        if form.is_valid():
-            form.save()
-            print("data saved", form)
-            # After successfully saving the data, render the same page with the form
-            return render(request, 'dashboard/category/index.html', {'form': CategoryForm()})
-    else:
-        form = CategoryForm()
-    return render(request, 'dashboard/category/index.html', {'form': form})
+        if request.method == 'POST':
+            name=request.POST.get('name')
+            cat=Category(name=name)
+            cat.save()
+            return redirect('/category')
+        return render(
+                  request,
+                  'dashboard/category/index.html')
+
