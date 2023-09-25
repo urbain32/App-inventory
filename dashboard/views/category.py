@@ -1,6 +1,4 @@
 from django.shortcuts import render,redirect
-from django.http import HttpResponse
-from ..forms import CategoryForm
 from ..models import Category
 
 # Create your views here.
@@ -37,3 +35,9 @@ def update(request,id):
         )
         cat.save()
         return redirect('/category')
+    
+def delete(request,id):
+    if request.method=='POST':
+        categories=Category.objects.filter(id=id)
+        categories.delete()
+    return redirect('/category')
