@@ -3,4 +3,4 @@ from django.http import HttpResponse
 # Create your views here.
 
 def order(request):
-    return render(request,'dashboard/order.html')
+    return render(request,'dashboard/order/order.html')
