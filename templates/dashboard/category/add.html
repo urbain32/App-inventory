@@ -1,6 +1,6 @@
 {% block content %}
 <!-- Modal -->
-<form class="forms-sample" method="post" action="{% url 'create_Category' %}">
+<form class="forms-sample" method="post" action="{% url 'create_category' %}">
   {% csrf_token %}
   <div
     class="modal fade"
@@ -25,8 +25,8 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <label for="{{ form.name.id_for_label }}">Name</label>
-            {{ form.name }}
+            <label>Name</label>
+            <input name="name" type="text" class="form-control" required />
           </div>
         </div>
         <div class="modal-footer">
@@ -38,7 +38,7 @@
           >
             Cancel
           </button>
-          <button type="submit" class="btn btn-success">Save</button>
+          <button type="submit" class="btn btn-success">Add</button>
         </div>
       </div>
     </div>
