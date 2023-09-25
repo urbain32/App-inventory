@@ -1,17 +1,9 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .forms import CategoryForm
-from .models import Category
+from ..forms import CategoryForm
+from ..models import Category
 # Create your views here.
 
-def index(request):
-    return render(request,'dashboard/index.html')
-def staff(request):
-    return render(request,'dashboard/staff.html')
-def product(request):
-    return render(request,'dashboard/product/index.html')
-def order(request):
-    return render(request,'dashboard/order.html')
 # Category
 def categoryView(request):
     categories = Category.objects.all()  # Fetch categories from the database
