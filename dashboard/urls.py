@@ -15,6 +15,8 @@ urlpatterns=[
     path('category/delete/<int:id>',category.delete,name="category_delete"),
     # product
     path('product/',product.productView,name='dashboard-product'),
+    path('product/add',product.productAddView,name='create_product'),
+
 
 
 
