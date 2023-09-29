@@ -17,6 +17,9 @@ def productAddView(request):
             if form.is_valid():
                 form.save()
                 return redirect('/product')
+            return render(
+                  request,
+                  'dashboard/product/index.html')
             
 def productUpdateView(request,id):
      if request.method == 'POST':
@@ -28,5 +31,11 @@ def productUpdateView(request,id):
         if form.is_valid():
             form.save()
         return redirect('/product')
+     
+def productDeleteView(request,id):
+    if request.method=='POST':
+        products=Product.objects.filter(id=id)
+        products.delete()
+    return redirect('/product')
     
 
