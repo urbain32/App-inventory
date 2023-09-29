@@ -16,6 +16,8 @@ urlpatterns=[
     # product
     path('product/',product.productView,name='dashboard-product'),
     path('product/add',product.productAddView,name='create_product'),
+    path('product/update/<int:id>',product.productUpdateView,name="product_update"),
+
 
 
 
