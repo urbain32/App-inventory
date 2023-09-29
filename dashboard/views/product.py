@@ -8,8 +8,6 @@ from ..forms import ProductForm
 def productView(request):
     products = Product.objects.all() 
     categories = Category.objects.all() 
-    print('categories',categories)
-    print('products',products)
     return render(request, 'dashboard/product/index.html', {'products': products,'categories':categories})
 def productAddView(request):
         if request.method == 'POST':
