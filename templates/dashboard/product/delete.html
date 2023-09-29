@@ -1,16 +1,18 @@
 {% block content %}
 <!-- Modal -->
-<form action="">
-  <div
-    id="deleteProductModal"
-    class="modal fade"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-    role="dialog"
-  >
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
+{% for product in products%}
+<div
+  id="deleteProductModal-{{forloop.counter}}"
+  class="modal fade"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  role="dialog"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <form action="/product/delete/{{product.id}}" method="post">
+        {% csrf_token %}
         <div class="modal-header">
           <h4 class="modal-title">Delete Product</h4>
           <button
@@ -21,9 +23,9 @@
           ></button>
         </div>
         <div class="modal-body">
-          <p>Are you sure to delete ?</p>
+          <p>Are you sure to delete this {{product.name}}?</p>
           <p class="text-danger">
-            <small>!!! this action is irreversible.</small>
+            <small>N.B: This action is irreversible.</small>
           </p>
         </div>
         <div class="modal-footer">
@@ -37,8 +39,8 @@
           </button>
           <button class="btn btn-success" type="submit">Delete</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
-</form>
-{% endblock %}
+</div>
+{% endfor %} {% endblock %}
