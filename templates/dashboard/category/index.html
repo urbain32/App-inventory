@@ -8,11 +8,27 @@
     {% for message in messages %}
     <!--succes message-->
     {% if message.tags == 'success' %}
-    <div class="alert alert-success" role="alert">{{ message }}</div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong><i class="mdi mdi-check-circle"></i> </strong> {{ message }}
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
     {% endif %}
     <!--error message-->
     {% if message.tags == 'error' %}
-    <div class="alert alert-danger" role="alert">{{ message }}</div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <strong><i class="mdi mdi-alert"></i> </strong> {{ message }}
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
     {% endif %} {% endfor %} {% endif %}
   </div>
   <div class="page-header">
