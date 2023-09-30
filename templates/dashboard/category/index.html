@@ -2,6 +2,19 @@
 <!--Table-->
 {%block content %}
 <div class="content-wrapper">
+  <div class="d-flex align-items-end justify-content-end">
+    {% if messages %}
+    <!--for loop-->
+    {% for message in messages %}
+    <!--succes message-->
+    {% if message.tags == 'success' %}
+    <div class="alert alert-success" role="alert">{{ message }}</div>
+    {% endif %}
+    <!--error message-->
+    {% if message.tags == 'error' %}
+    <div class="alert alert-danger" role="alert">{{ message }}</div>
+    {% endif %} {% endfor %} {% endif %}
+  </div>
   <div class="page-header">
     <h3 class="page-title">
       <span class="page-title-icon bg-gradient-primary text-white me-2">
