@@ -36,6 +36,7 @@ def update(request,id):
             name=name,
         )
         cat.save()
+        messages.success(request, 'Category updated successfully.') 
         return redirect('/category')
     
 def delete(request,id):
