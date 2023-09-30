@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from ..models import Category
+from django.contrib import messages
 
 # Create your views here.
 
@@ -12,6 +13,7 @@ def categoryAddView(request):
             name=request.POST.get('name')
             cat=Category(name=name)
             cat.save()
+            messages.success(request, 'Category added successfully.') 
             return redirect('/category')
         return render(
                   request,
