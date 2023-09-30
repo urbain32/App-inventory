@@ -43,4 +43,5 @@ def delete(request,id):
     if request.method=='POST':
         categories=Category.objects.filter(id=id)
         categories.delete()
+        messages.success(request, 'Category delete successfully.') 
     return redirect('/category')
