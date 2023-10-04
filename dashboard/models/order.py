@@ -10,7 +10,7 @@ class Order(models.Model):
     class Meta:
         verbose_name_plural = 'Order'
     def __str__(self):
-        return f'{self.product} ordered by {self.staff.username}'
+        return f'{self.product} ordered by {self.staff.username} quantity ordered is {self.order_quantity}'
 
 
     
