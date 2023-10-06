@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+# we can also import the app views and created it url directly in the project urls
 from user.views import register
 
 urlpatterns = [
