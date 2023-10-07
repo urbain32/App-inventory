@@ -5,4 +5,5 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Category
 def registerView(request):
+    form = UserCreationForm()
     return render(request, 'user/register.html')
