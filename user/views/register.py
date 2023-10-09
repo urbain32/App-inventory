@@ -6,7 +6,9 @@ from django.contrib.auth.forms import UserCreationForm
 # Category
 def registerView(request):
     if request.method == 'POST':
-        form = UserCreationForm()
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
     else:
         form = UserCreationForm()
     context={'form':form}
