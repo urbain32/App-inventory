@@ -4,11 +4,12 @@ from django.contrib.auth.forms import UserCreationForm
 
 class CreateUserForm(UserCreationForm):
     email=forms.EmailField()
+    firstname=forms.CharField()
 
     class Meta:
         model=User
         # the __all__ will bring all the field int UserCreationForm
-        fields=['username','email','password1','password2']
+        fields=['firstname','username','email','password1','password2']
 
 
         
