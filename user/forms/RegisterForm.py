@@ -8,7 +8,7 @@ class CreateUserForm(UserCreationForm):
     class Meta:
         model=User
         # the __all__ will bring all the field int UserCreationForm
-        fields='__all__'
+        fields=['username','email','password1','password2']
 
 
         
