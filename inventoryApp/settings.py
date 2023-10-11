@@ -124,3 +124,4 @@ STATIC_ROOT = (BASE_DIR/"asert/")
 
 # log in and out redirect url
 LOGIN_REDIRECT_URL='dashboard-index'
+LOGOUT_REDIRECT_URL='user-login'
