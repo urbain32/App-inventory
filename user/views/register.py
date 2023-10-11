@@ -10,7 +10,7 @@ def registerView(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('user-register')
+            return redirect('user-login')
     else:
         form = CreateUserForm()
     context={'form':form}
