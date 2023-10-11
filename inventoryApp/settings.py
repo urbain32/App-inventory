@@ -121,3 +121,6 @@ STATICFILES_DIRS = [
 ]
 # this will help django to create a collecton of static files of our project using collectstatic
 STATIC_ROOT = (BASE_DIR/"asert/")
+
+# log in and out redirect url
+LOGIN_REDIRECT_URL='dashboard-index'
