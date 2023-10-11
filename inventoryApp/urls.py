@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path,include
 # we can also import the app views and created it url directly in the project urls
 from user.views import register
+# using the built in login logout of django
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
