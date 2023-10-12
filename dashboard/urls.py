@@ -5,7 +5,7 @@ from .views import dashboard,staff,product,order,category
 # calling our function in views
 # path(giving url path name,name of the function in views,name we want to give our function)
 urlpatterns=[
-    path('',dashboard.index,name='dashboard-index'),
+    path('dashboard/',dashboard.index,name='dashboard-index'),
     path('staff/',staff.staff,name='dashboard-staff'),
     path('order/',order.order,name='dashboard-order'),
     # category
