@@ -11,6 +11,7 @@ def productView(request):
     products = Product.objects.all() 
     categories = Category.objects.all() 
     return render(request, 'dashboard/product/index.html', {'products': products,'categories':categories})
+@login_required
 def productAddView(request):
     if request.method == 'POST':
         form = ProductForm(request.POST)
@@ -23,7 +24,7 @@ def productAddView(request):
             return redirect('/product')
 
     return render(request, 'dashboard/product/index.html')
-            
+@login_required            
 def productUpdateView(request,id):
      if request.method == 'POST':
         if id == 0:
@@ -35,7 +36,7 @@ def productUpdateView(request,id):
             form.save()
             messages.success(request, 'Product updated successfully.')
         return redirect('/product')
-     
+@login_required     
 def productDeleteView(request,id):
     if request.method=='POST':
         products=Product.objects.filter(id=id)
