@@ -11,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 def categoryView(request):
     categories = Category.objects.all() 
     return render(request, 'dashboard/category/index.html', {'categories': categories})
+@login_required
 def categoryAddView(request):
         if request.method == 'POST':
             name=request.POST.get('name')
@@ -21,7 +22,7 @@ def categoryAddView(request):
         return render(
                   request,
                   'dashboard/category/index.html')
-
+@login_required
 def edit(request):
     categories=Category.objects.all()
     context={
@@ -30,7 +31,7 @@ def edit(request):
     return redirect(
                   request,
                    'app/pays/index.html',context)
-
+@login_required
 def update(request,id):
     if request.method=="POST":
         name=request.POST.get("name")
@@ -41,7 +42,7 @@ def update(request,id):
         cat.save()
         messages.success(request, 'Category updated successfully.') 
         return redirect('/category')
-    
+@login_required  
 def delete(request,id):
     if request.method=='POST':
         categories=Category.objects.filter(id=id)
