@@ -2,10 +2,11 @@ from django.shortcuts import render,redirect
 from ..models import Product,Category
 from ..forms import ProductForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+# Create product views here.
 
-# product
+@login_required(login_url='user-login')
 def productView(request):
     products = Product.objects.all() 
     categories = Category.objects.all() 
