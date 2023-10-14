@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # Category
-@login_required(login_url='user-login')
+@login_required
 def categoryView(request):
     categories = Category.objects.all() 
     return render(request, 'dashboard/category/index.html', {'categories': categories})
