@@ -1,10 +1,13 @@
 from django.shortcuts import render,redirect
 from ..models import Category
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 
 # Category
+@login_required(login_url='user-login')
 def categoryView(request):
     categories = Category.objects.all() 
     return render(request, 'dashboard/category/index.html', {'categories': categories})
