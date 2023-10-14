@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create product views here.
 
-@login_required(login_url='user-login')
+@login_required
 def productView(request):
     products = Product.objects.all() 
     categories = Category.objects.all() 
