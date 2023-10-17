@@ -3,6 +3,7 @@
 {%load static%}
 <!-- block content -->
 {%block content%}
+{% if user.is_authenticated%}
 <!-- partial:partials/_navbar.html -->
 {% include 'partials/navbar.html' %}
 <!-- partial -->
@@ -129,5 +130,5 @@
 </div>
 </div>
 </div>
-
+{%endif%}
 {%endblock%}
