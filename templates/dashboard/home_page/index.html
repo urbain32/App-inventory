@@ -5,12 +5,13 @@
 {%block content%}
 <!-- partial:partials/_navbar.html -->
 {% include 'partials/navbar.html' %}
-<!-- check is if user is staff and user.is_authenticated -->
-{% if user.is_authenticated and user.is_staff and user.is_superuser%}
+
 <!-- partial -->
 <div class="container-fluid page-body-wrapper">
   <!-- partial:partials/_sidebar.html -->
   {% include 'partials/sidebar.html' %}
+  <!-- check is if user is staff and user.is_authenticated -->
+  {% if user.is_authenticated and user.is_staff and user.is_superuser%}
   <div class="main-panel">
     <div class="content-wrapper">
       <div class="page-header">
@@ -131,5 +132,6 @@
       </div>
     </div>
   </div>
+  {%endif%}
 </div>
-{%endif%} {%endblock%}
+{%endblock%}
