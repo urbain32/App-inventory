@@ -25,7 +25,12 @@
     <!--logout function-->
     <ul class="navbar-nav navbar-nav-right">
       <li class="nav-item nav-profile dropdown">
-        <a class="nav-link" id="profileDropdown" href="#" aria-expanded="false">
+        <a
+          class="nav-link"
+          id="profileDropdown"
+          href="{% url 'user-profile'%}"
+          aria-expanded="false"
+        >
           <div class="nav-profile-img">
             <img src="{% static '/images/faces/face1.jpg' %}" alt="image" />
             <span class="availability-status online"></span>
