@@ -1,0 +1,22 @@
+// creating django startproject without environment
+1. python -m django startproject projectname
+// help to see which commond we can use with manage.py
+2. python manage.py help 
+// creating environment
+3.  python -m venv env
+4. source env/Scripts/activate // activating using bash 
+// for updating new requirement requirements 
+5.pip freeze > requirements.txt
+// to install the already in project requirements
+6. pip install -r requirements.txt
+// creating an app
+7. python manage.py startapp appname
+// collectstatic helps when we are connecting our css
+8. python manage.py collectstatic
+// first we use this to migrate the django given migration bfoe creating models
+9. python manage.py migrate
+// after creating the models is better to separate them
+// so that migrations can easly be readed in migration folder we use 
+10. python manage.py makemigrations
+// after making migration we need to migrate again
+11. python manage.py migrate
