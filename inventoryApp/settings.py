@@ -128,5 +128,5 @@ LOGOUT_REDIRECT_URL='user-login'
 # anonther way of using login required
 LOGIN_URL='user-login'
 # how to save images in django
-MEDIA_ROOT  =''
+MEDIA_ROOT=(BASE_DIR/"media")
 MEDIA_URL='/media/'
