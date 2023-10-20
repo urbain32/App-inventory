@@ -129,4 +129,4 @@ LOGOUT_REDIRECT_URL='user-login'
 LOGIN_URL='user-login'
 # how to save images in django
 MEDIA_ROOT  =''
-MEDIA_URL=''
+MEDIA_URL='/media/'
