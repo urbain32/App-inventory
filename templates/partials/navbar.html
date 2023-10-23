@@ -32,7 +32,7 @@
           aria-expanded="false"
         >
           <div class="nav-profile-img">
-            <img src="{% static '/images/faces/face1.jpg' %}" alt="image" />
+            <img src="{{user.profile.image.url}}" alt="image" />
             <span class="availability-status online"></span>
           </div>
           <div class="nav-profile-text">
