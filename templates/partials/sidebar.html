@@ -11,7 +11,7 @@
         <div class="nav-profile-text d-flex flex-column">
           <span class="font-weight-bold mb-2">{{user.username}}</span>
           {% if user.is_authenticated and user.is_staff and user.is_superuser%}
-          <span class="text-secondary text-small">Admin</span>
+          <span class="text-secondary text-small">Admin Position</span>
           {%else%}
           <span class="text-secondary text-small">Staff</span> {%endif%}
         </div>
