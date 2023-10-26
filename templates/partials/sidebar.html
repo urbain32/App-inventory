@@ -4,12 +4,7 @@
     <li class="nav-item nav-profile">
       <a href="#" class="nav-link">
         <div class="nav-profile-image">
-          {% if user.profile.image.url%}
           <img src="{{user.profile.image.url}}" alt="profile" />
-
-          {%else%}
-          <img src="{{user.profile.image.url}}" alt="profile" />
-          {%endif%}
           <span class="login-status online"></span>
           <!--change to offline or busy as needed-->
         </div>
