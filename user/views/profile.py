@@ -7,4 +7,4 @@ def profile(request):
     return render(request, 'user/profile.html')
 
 def profile_update(request):
-    return render()
+    return render(request, 'user/profile_update.html')
