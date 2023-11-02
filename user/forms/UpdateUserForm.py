@@ -1,4 +1,5 @@
 from django import forms
+from ..models import Profile
 from django.contrib.auth.models import User
 
 class UpdateUserForm(forms.ModelForm):
@@ -6,4 +7,5 @@ class UpdateUserForm(forms.ModelForm):
         model=User
         fields=['firstname','username','email']
 
-class ProfileUpdateForm(forms.ModelForm)
+class ProfileUpdateForm(forms.ModelForm):
+   
