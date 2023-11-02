@@ -8,4 +8,6 @@ class UpdateUserForm(forms.ModelForm):
         fields=['firstname','username','email']
 
 class ProfileUpdateForm(forms.ModelForm):
-   
+   class Meta:
+        model=Profile
+        fields=['address','phone','image']
