@@ -1,0 +1,63 @@
+{% extends "partials/base.html" %} {%block title%} Profile Update page {%endblock%}
+<!--load static-->
+{% load static %}
+<!--block-->
+{% block content %}
+<div
+  class="modal fade"
+  id="profileModal"
+  tabindex="-1"
+  aria-labelledby="profileModalLabel"
+  aria-hidden="true"
+  role="dialog"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="profileModalLabel">Profile Information</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body"><div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr>
+                        <th>Name</th>
+                        <td>King</td>
+                      </tr>
+                      <tr>
+                        <th>Email</th>
+                        <td>rrrr</td>
+                      </tr>
+                      <tr>
+                        <th>Phone</th>
+                        <td>rrrr</td>
+                      </tr>
+                      <tr>
+                        <th>Address</th>
+                        <td>rrrrr</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+        </div>
+      </div></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <a href='{% url 'user-logout' %}' class="btn btn-primary text-decoration-none">Sign out</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
