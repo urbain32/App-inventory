@@ -8,6 +8,8 @@ def profile(request):
     return render(request, 'user/profile.html')
 
 def profile_update(request):
+    if request.method =='POST':
+        form = UpdateUserForm()
     context={
 
     }
