@@ -13,7 +13,7 @@ def profile_update(request):
         profile_form = ProfileUpdateForm(request.POST,request.FILES,instance=request.user.profile)
     else:
         user_form = UpdateUserForm(instance=request.user)
-        
+        profile_form = ProfileUpdateForm(instance=request.user.profile)       
     context={
 
     }
