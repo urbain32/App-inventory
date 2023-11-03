@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class UpdateUserForm(forms.ModelForm):
     class Meta:
         model=User
-        fields=['firstname','username','email']
+        fields=['username','email']
 
 class ProfileUpdateForm(forms.ModelForm):
    class Meta:
