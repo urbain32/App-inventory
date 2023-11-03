@@ -10,7 +10,7 @@ def profile(request):
 def profile_update(request):
     if request.method =='POST':
         user_form = UpdateUserForm(request.POST,instance=request.user)
-        profile_form = ProfileUpdateForm(request.POST,instance=request.FILES)
+        profile_form = ProfileUpdateForm(request.POST,request.FILES,instance=request.user.profile)
     context={
 
     }
