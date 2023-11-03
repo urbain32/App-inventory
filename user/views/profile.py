@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from ..forms.UpdateUserForm import UpdateUserForm,ProfileUpdateForm
 
 # Create your views here.
 
