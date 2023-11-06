@@ -29,6 +29,7 @@
           </ul>
         </nav>
       </div>
+      
     <div class="row">
         <div class="col-lg-4">
           <div class="card">
@@ -36,60 +37,31 @@
                 <form method='POST'>
                   
                   <div class="form-group">
-                    {{ form.username.label_tag }}
-                    <input
-                      type="text"
-                      class="form-control form-control-lg"
-                      id="exampleInputUsername1"
-                      placeholder="Username"
-                      name="{{ form.username.name }}"
-                    />
+                    {{ user_form.username.label_tag }}{{ user_form.username }}
                     <div class="text-danger">{{ form.username.errors }}</div>
                   </div>
       
                   <div class="form-group">
-                    {{ form.email.label_tag }}
-                    <input
-                      type="email"
-                      class="form-control form-control-lg"
-                      id="exampleInputEmail1"
-                      placeholder="Email"
-                      name="{{ form.email.name }}"
-                    />
-                    <div class="text-danger">{{ form.email.errors }}</div>
+                    {{ user_form.email.label_tag }}
+                    {{ user_form.email }}                
+                    <div class="text-danger">{{ user_form.email.errors }}</div>
                   </div>
                   <div class="form-group">
-                    {{ form.profile.phone.label_tag }}
-                    <input
-                      type="text"
-                      class="form-control form-control-lg"
-                      id="exampleInputphone1"
-                      placeholder="phone"
-                      name="{{ form.profile.phone.name }}"
-                    />
-                    <div class="text-danger">{{ form.profile.phone.errors }}</div>
+                    {{ profile_form.phone.label_tag }}
+                    {{ profile_form.phone }}
+                    
+                    <div class="text-danger">{{ profile_form.phone.errors }}</div>
                   </div>
                   <div class="form-group">
-                    {{ form.profile.address.label_tag }}
-                    <input
-                      type="text"
-                      class="form-control form-control-lg"
-                      id="exampleInputaddress1"
-                      placeholder="address"
-                      name="{{ form.profile.address.name }}"
-                    />
-                    <div class="text-danger">{{ form.profile.address.errors }}</div>
+                    {{ profile_form.address.label_tag }}
+                   {{ profile_form.address }}
+                    
+                    <div class="text-danger">{{ profile_form.address.errors }}</div>
                   </div>
                   <div class="form-group">
-                    {{ form.profile..profile.image.label_tag }}
-                    <input
-                      type="file"
-                      class="form-control form-control-lg"
-                      id="exampleInput.profile.image1"
-                      placeholder=".profile.image"
-                      name="{{ form.profile..profile.image.name }}"
-                    />
-                    <div class="text-danger">{{ form.profile..profile.image.errors }}</div>
+                    {{ profile_form.image.label_tag }}
+                    {{ profile_form.image}}
+                    <div class="text-danger">{{ profile_form.image.errors }}</div>
                   </div>
                   
                 </form>
@@ -101,6 +73,11 @@
   </div>
   </div>
 </div>
+<style>
+  .form-group input{
+    padding: 10px;
+  }
+</style>
 
 
 {% endblock %}
