@@ -32,7 +32,7 @@
       </div>
       
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-8">
           <div class="card">
             <div class="card-body">
                 <form method='POST'>
@@ -62,6 +62,14 @@
                   <div class="form-group">
                     {{ profile_form.image}}
                     <div class="text-danger">{{ profile_form.image.errors }}</div>
+                  </div>
+                  <div class="mt-3 d-flex justify-content-end">
+                    <button
+                      type="submit"
+                      class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn"
+                    >
+                      Update
+                    </button>
                   </div>
                   
                 </form>
