@@ -35,7 +35,7 @@
         <div class="col-lg-8">
           <div class="card">
             <div class="card-body">
-                <form method='POST'>
+                <form method='POST' enctype="multipart/form-data">
                   {% csrf_token %}
                   <div class="form-group">
                     {{ user_form.username.label_tag }}{{ user_form.username }}
