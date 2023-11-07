@@ -13,8 +13,8 @@ def profile_update(request):
         # instance helps also to show current data of user if with file
         user_form = UpdateUserForm(request.POST,instance=request.user)
         profile_form = ProfileUpdateForm(request.POST,request.FILES,instance=request.user.profile)
-        if user_form.is_valid:
-            user_form.save()
+        if user_form.is_valid and profile_form.is_valid:
+            
     else:
         user_form = UpdateUserForm(instance=request.user)
         profile_form = ProfileUpdateForm(instance=request.user.profile)       
